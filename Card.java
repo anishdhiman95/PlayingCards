@@ -1,32 +1,32 @@
 public class Card {
 
 	private Rank rank;
-	private Suite suite;
+	private Suit suit;
 	
 	public Card(){
 		this.rank = null;
-		this.suite = null;		
+		this.suit = null;		
 	}
 	
-	public Card(Rank rank, Suite suite){
+	public Card(Rank rank, Suit suit){
 		this.rank = rank;
-		this.suite = suite;
+		this.suit = suit;
 		
 	}
 	
-	public Card(String rank, String suite){
+	public Card(String rank, String suit){
 		this.rank = new Rank(rank.toUpperCase());
-		this.suite = new Suite(suite.toUpperCase());		
+		this.suit = new Suit(suit.toUpperCase());		
 	}
 	
 	public Card(String card){
 		if(card.length() == 2){
 			this.rank = new Rank(card.toUpperCase().charAt(0) + "");
-			this.suite = new Suite(card.toUpperCase().charAt(1) + "");
+			this.suit = new Suit(card.toUpperCase().charAt(1) + "");
 		}
 		else{
 			this.rank = new Rank(card.toUpperCase().substring(0, 1));
-			this.suite = new Suite(card.toUpperCase().charAt(2) + "");	
+			this.suit = new Suit(card.toUpperCase().charAt(2) + "");	
 		}
 		
 	}
@@ -39,24 +39,24 @@ public class Card {
 		this.rank = rank;
 	}
 
-	public Suite getCardSuite() {
-		return suite;
+	public Suit getCardSuit() {
+		return suit;
 	}
 
-	public void setCardSuite(Suite suite) {
-		this.suite = suite;
+	public void setCardSuit(Suit suit) {
+		this.suit = suit;
 	}
 
 
 	public String toString() {
-		return "Card: " + rank.toString() + "of" + suite.toString();
+		return "Card: " + rank.toString() + "of" + suit.toString();
 	}
 	
 	public boolean isCardGreater(Card card){
 		if(this.getCardRank().isGreater(card.getCardRank()))
 			return true;
 		else if(this.getCardRank().isEqual(card.getCardRank()))
-				return (this.getCardSuite().isGreater(card.getCardSuite()))? true : false;
+				return (this.getCardSuit().isGreater(card.getCardSuit()))? true : false;
 		else
 			return false;
 	}

@@ -1,13 +1,13 @@
-package Hand
+import java.util.ArrayList;
 
-Class Hand{
+public class Hand{
 			ArrayList<Card> cards;
 			int handMax=0;
 			public Hand(int limit){
 					cards = new ArrayList<Card>();
 					handMax = limit;
 			}
-			public Hand(ArrayList<Cards> c){
+			public Hand(ArrayList<Card> c){
 				this.cards = c;
 			}
 			public Hand(String list){
@@ -33,7 +33,7 @@ Class Hand{
 					return hand;
 			}
 			public static void main(String args[]){
-				System.out.println("Hi")
+				System.out.println("Hi");
 			}
 			
 }
