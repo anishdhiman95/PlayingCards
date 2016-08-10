@@ -1,3 +1,5 @@
+package com.bootcamp.playingcards;
+
 public class Card {
 
 	private Rank rank;

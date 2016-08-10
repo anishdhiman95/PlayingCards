@@ -1,3 +1,5 @@
+package com.bootcamp.playingcards;
+
 import java.util.HashMap;
 
 public class Rank {
