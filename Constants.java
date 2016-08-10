@@ -1,4 +1,3 @@
-package com.bootcamp.playingcards;
 
 enum Constants {
 	SPADE("S"),
@@ -14,10 +13,10 @@ enum Constants {
 	EIGHT("8"),
 	NINE("9"),
 	TEN("10"),
-	JACK("11"),
-	QUEEN("12"),
-	KING("13"),
-	ACE("14");
+	JACK("J"),
+	QUEEN("Q"),
+	KING("K"),
+	ACE("A");
 	
 	private String value;
 

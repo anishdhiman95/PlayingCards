@@ -3,10 +3,6 @@ import java.util.HashMap;
 public class Suit {
 
 	private String suit;
-	private final int SPADES = 1;
-	private final int HEARTS = 2;
-	private final int DIAMONDS = 3;
-	private final int CLUBS = 4;
 	
 	private static HashMap<String, Integer> suitList = new HashMap<String, Integer>(){{
 		put("S", 1);
@@ -32,7 +28,7 @@ public class Suit {
 	}
 	
 	public String toString(){
-		return "Suit: " + this.getSuit();
+		return this.getSuit();
 	}
 	
 	public boolean isEqual(Suit suit2) {
@@ -47,6 +43,10 @@ public class Suit {
 			return true;
 		else
 			return false;
+	}
+	
+	public int getValue(){
+		return suitList.get(this.suit);
 	}
 	
 }

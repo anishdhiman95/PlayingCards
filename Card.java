@@ -1,6 +1,5 @@
-package com.bootcamp.playingcards;
 
-public class Card {
+public class Card implements Comparable<Card>{
 
 	private Rank rank;
 	private Suit suit;
@@ -49,9 +48,16 @@ public class Card {
 		this.suit = suit;
 	}
 
-
+	public int getRankValue(){
+		return this.rank.getValue();
+	}
+	
+	public int getSuitValue(){
+		return this.suit.getValue();
+	}
+	
 	public String toString() {
-		return "Card: " + rank.toString() + "of" + suit.toString();
+		return "Card- " + rank.toString() + " of " + suit.toString();
 	}
 	
 	public boolean isCardGreater(Card card){
@@ -62,6 +68,19 @@ public class Card {
 		else
 			return false;
 	}
+	
+	public boolean isCardEqual(Card card){
+		return (this.getRankValue() == card.getRankValue() && this.getSuitValue() == card.getSuitValue());
+	}
+	
+	 public int compareTo(Card c){
+	        if (this.isCardGreater(c))
+	            return 1;
+	        else if (this.isCardEqual(c))
+	            return 0;
+	        else 
+	            return -1;
+	    }
 
 	
 }

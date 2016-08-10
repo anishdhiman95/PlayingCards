@@ -1,4 +1,3 @@
-package com.bootcamp.playingcards;
 
 import java.util.HashMap;
 
@@ -51,8 +50,13 @@ public class Rank {
 	}
 	
 	public String toString(){
-		return "Rank: " + rank;
+		return rank;
 	}
+	
+	public int getValue(){
+		return rankList.get(this.rank);
+	}
+
 
 	
 }

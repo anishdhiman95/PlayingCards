@@ -1,6 +1,4 @@
-package com.bootcamp.playingcards;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
@@ -13,10 +11,15 @@ class Pack {
 
 	public Pack() {
 		for(Constants suit : suitNames) {
-			for(Constants rank: rankNames) {
-				Card newCard = new Card(rank,suit);
+			for(Constants rank: ranksNames) {
+				Card newCard = new Card(rank.toString(),suit.toString());
 				this.cards.add(newCard);
 			}
 		}
+	}
+	
+	public static void main(String [] args){
+		Pack pack = new Pack();
+		System.out.println(pack.cards.get(12). + pack.cards.get(12).getCardSuit().equals(pack.cards.get(12).getCardSuit()));
 	}
 }
